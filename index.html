@@ -34,20 +34,27 @@
     <div class="container">
         <div class="row">
             <div class="col-md">
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Title">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Credits">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description">
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description">
+                <input type="text" class="form-control" id="className" placeholder="Name">
+                <br>
+                <input type="text" class="form-control" id="classTitle" placeholder="Title">
+                <br>
+                <input type="text" class="form-control" id="classCredits" placeholder="Credits">
+                <br>
+                <input type="text" class="form-control" id="classPrereqs" placeholder="Prerequisite(s)">
+                <br>
+                <input type="text" class="form-control" id="classGenEds" placeholder="Gen Eds">
             </div>
             <div class="col-md">
-                One of three columns
+                <div class="form-group">
+                    <textarea class="form-control" rows="10" id="comment" placeholder="Description"></textarea>
+                  </div>
             </div>
             <div class="col-md">
-                One of three columns
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-light" onclick="accessData();">Select Course</button>
+                    <span class="wide-pad"></span>
+                    <button type="submit" class="btn btn-light" onclick="accessData();">Insert Course</button>
+                </div>
             </div>
         </div>
     </div>
