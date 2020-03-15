@@ -99,3 +99,7 @@ function changeColour(value)
     }
     document.body.style.backgroundColor = color;
 }
+
+function insertCourse(){
+    
+}
