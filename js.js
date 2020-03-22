@@ -100,6 +100,29 @@ function changeColour(value)
     document.body.style.backgroundColor = color;
 }
 
+
+const fs = require('fs')
+
 function insertCourse(){
-    
+    let className = document.querySelector("#className").value;
+    let classTitle = document.querySelector("#classTitle").value;
+    let classCredits = document.querySelector("#classCredits").value;
+    let classPrereqs = document.querySelector("#classPrereqs").value;
+    let classGenEds = document.querySelector("#classGenEds").value;
+    let classDescription = document.querySelector("#classDescription").value;
+
+    fs.readFile('classes.json', (err, data) => {
+        if (err) throw err;
+        let json = JSON.parse(data);
+        json.push('Name:' + className);
+        json.push('Title:' + classTitle);
+        json.push('Credits:' + classCredits);
+        json.push('Prereqs:' + classPrereqs);
+        json.push('GenEds:' + classGenEds);
+        json.push('Description:' + classDescription);
+
+        fs.writeFile('classes.json', JSON.stringify(json), (err) => {
+            if (err) throw err;
+        });
+    });
 }
